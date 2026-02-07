@@ -9,6 +9,7 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import Dashboard from "./pages/Dashboard";
+import QuizForm from "./component/QuizForm";
 
 const DefaultRoute = () => {
   const loginData = JSON.parse(localStorage.getItem("authData"));
@@ -33,9 +34,13 @@ function App() {
       element: <Register />,
     },
     {
-      path:"/dashboard",
-      element:<Dashboard/>
-    }
+      path: "/dashboard",
+      element: <Dashboard />,
+    },
+    {
+      path: "/quizform",
+      element: <QuizForm />,
+    },
   ]);
   return <RouterProvider router={route} />;
 }
