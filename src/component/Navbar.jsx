@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 
-const Navbar = ({ title, onLogout, btnAction }) => {
+const Navbar = ({ title, onLogout,onAddQuizBtnClick,isFormOpen }) => {
   const navigate = useNavigate();
   return (
     <>
@@ -10,10 +10,8 @@ const Navbar = ({ title, onLogout, btnAction }) => {
           <h1>{title}</h1>
         </div>
         <div className="navbar-action">
-          <button className="btn-primary">
-            <Link to="/quizform" className="link-text">
-              {btnAction}
-            </Link>
+          <button className={isFormOpen ? "btn-secondary" : "btn-primary"} onClick={onAddQuizBtnClick}>
+            {isFormOpen ? "Close" : "Add Quiz"}
           </button>
           <button className="btn-secondary" onClick={onLogout}>
             Logout

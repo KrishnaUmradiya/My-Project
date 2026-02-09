@@ -1,16 +1,17 @@
 import React from "react";
 
-const QuizList = () => {
+const QuizList = ({quizes=[]}) => {
   return (
     <>
       <div className="task-grid">
+        {quizes.map((quiz)=>(
         <div className="task-card" style={{ position: "relative" }}>
-          <h3>My Quiz</h3>
-          <p>This is Maths quiz</p>
+          <h3>{quiz.title}</h3>
+          <p>{quiz.description}</p>
 
           <div className="task-meta">
-            <span>Due : 07-02-2026</span>
-            <span className="priority-badge priority-high">High</span>
+            <span>Due : {quiz.date}</span>
+            <span className="priority-badge priority-high">{quiz.level}</span>
           </div>
           <div className="task-action">
             <button
@@ -36,6 +37,7 @@ const QuizList = () => {
             </button>
           </div>
         </div>
+         ))} 
       </div>
     </>
   );

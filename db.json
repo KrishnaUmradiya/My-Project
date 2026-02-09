@@ -1,1 +1,36 @@
-{}
+{
+  "quizes": [
+    {
+      "id": "1",
+      "title": "myQuiz",
+      "description": "hello",
+      "date": "2026-07-02",
+      "level": "Medium",
+      "completed": false
+    },
+    {
+      "id": "b369",
+      "title": "maths-quiz",
+      "description": "it is easy",
+      "date": "2026-02-09",
+      "level": "Medium",
+      "completed": false
+    },
+    {
+      "id": "de2e",
+      "title": "myQuiz",
+      "description": "hello",
+      "date": "2026-02-09",
+      "level": "Medium",
+      "completed": false
+    },
+    {
+      "id": "81e3",
+      "title": "mathsQuiz",
+      "description": "it is medium",
+      "date": "2026-02-12",
+      "level": "Medium",
+      "completed": false
+    }
+  ]
+}
